@@ -1,16 +1,12 @@
 {% include 'recipes/partials/head.html' %}
 
 <body>
-    <header class="main-header-container">
-        <div class="main-header-container">
-            <h1 class="main-header-headline">Neomatik</h1>
-        </div>
-    </header>
+    {% include 'recipes/pages/header.html' %}
 
     <section class="main-section">
         <div class="main-section-container">
             <h3 class="login-box-headline">Login</h3>
-            <form>
+            <form action="main/" method="post">
                 <div class="login-box">
                     <div class="login-box-inputs">
                         <div class="text-field">
@@ -24,7 +20,7 @@
                     </div>
                     <div class="login-box-buttons">
                         <a class="fgtpsw-text support-button" href="login/">Esqueceu sua senha?</a>
-                        <button class="submit-button" name="login">Entrar</button>
+                        <input class="submit-button" type="submit" value="Entrar">
                         <a class="didnt-register support-button"href="register/">Ainda não se cadastrou?</a>
         
                     </div>

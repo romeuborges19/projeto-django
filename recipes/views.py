@@ -14,3 +14,6 @@ def tela_login(request):
 
 def register_page(request):
     return HttpResponse("TELA DE CADASTRO")
+
+def main_page(request):
+    return render(request, 'recipes/pages/main-page.html')
