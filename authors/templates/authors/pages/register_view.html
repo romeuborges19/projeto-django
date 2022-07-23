@@ -20,10 +20,12 @@
                         <div class="name">
                             <label for="first-name" class="label">Primeiro nome:</label><br/>
                             {{form.first_name}}
+                            {{ form.first_name.errors }}
                         </div>
                         <div class="name">
                             <label for="last-name" class="label">Último nome:</label><br/>
                             {{form.last_name}}
+                            {{ form.last_name.errors }}
                         </div>
                         
                     </div>
@@ -31,21 +33,30 @@
                     <div class="register-box-section">
                         <label for="username" class="label">Nome de usuário:</label><br/>
                         {{form.username}}
+                        {{ form.username.errors }}
+                        
                     </div>
                     <div class="register-box-section">
                         <label for="email" class="label">E-mail:</label><br/>
                         {{form.email}}
+                        {{ form.email.errors }}
                     </div>
                     <div class="register-box-section">
                         <label for="password" class="label">Insira sua senha:</label><br/>
                         {{form.password1}}
+                        {{ form.password1.errors }}
                     </div>
                     <div class="register-box-section" class="label">
                         <label for="confirm-password" class="label">Confirme sua senha:</label><br/>
                         {{form.password2}}
+                        {{ form.password2.errors }}
+                        {{form.password.errors}}
                     </div>
                 </div>
-                <input class="register-button" type="submit" name="Create User" href="main/">
+                <div class="error-message">
+                </div>
+                <input class="register-button" type="submit" name="Create User" href="main/" value="Cadastrar">
+            
         
             </div>
         
