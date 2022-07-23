@@ -1,0 +1,57 @@
+{% include 'authors\partials\register_view_head.html' %}
+{% include 'recipes/partials/head.html' %}
+
+<body>
+    {% include 'recipes/pages/header.html' %}
+
+    <div class="main-register-section">
+        <form action="{% url 'authors:create' %}" method="POST">
+            {% csrf_token %}
+        
+        
+            <div class="register-box-container">
+                <div class="register-box-headline">
+                    <h3>Faça seu cadastro </h3>
+                </div>
+                
+                <div class="register-box">
+
+                    <div class="register-box-name">
+                        <div class="name">
+                            <label for="first-name" class="label">Primeiro nome:</label><br/>
+                            {{form.first_name}}
+                        </div>
+                        <div class="name">
+                            <label for="last-name" class="label">Último nome:</label><br/>
+                            {{form.last_name}}
+                        </div>
+                        
+                    </div>
+
+                    <div class="register-box-section">
+                        <label for="username" class="label">Nome de usuário:</label><br/>
+                        {{form.username}}
+                    </div>
+                    <div class="register-box-section">
+                        <label for="email" class="label">E-mail:</label><br/>
+                        {{form.email}}
+                    </div>
+                    <div class="register-box-section">
+                        <label for="password" class="label">Insira sua senha:</label><br/>
+                        {{form.password1}}
+                    </div>
+                    <div class="register-box-section" class="label">
+                        <label for="confirm-password" class="label">Confirme sua senha:</label><br/>
+                        {{form.password2}}
+                    </div>
+                </div>
+                <input class="register-button" type="submit" name="Create User" href="main/">
+        
+            </div>
+        
+        
+        </form>
+    </div>
+
+</body>
+</html>
