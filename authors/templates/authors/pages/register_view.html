@@ -53,9 +53,11 @@
                         {{form.password.errors}}
                     </div>
                 </div>
-                <div class="error-message">
-                </div>
+                {% if form.errors %}
+                    <div class="message message-error"> Por favor, corrija os erros no formulário.</div>
+                {% endif %}
                 <input class="register-button" type="submit" name="Create User" href="main/" value="Cadastrar">
+                <a class="didnt-register support-button"href="http://127.0.0.1:8000">Já tem uma conta? Faça login.</a>
             
         
             </div>

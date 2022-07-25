@@ -21,4 +21,9 @@ def register_create(request):
     request.session['register_form_data'] = POST
     form = CreateUserForm(POST)
 
+    if form.is_valid():
+        form.save()
+
+        del(request.session['register_form_data'])
+
     return redirect('authors:register')
